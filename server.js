@@ -14,8 +14,7 @@ app.get('/', function(req, res) {
 app.get('/abc', function(req, res) {
   res.send("<script>" + 
            "function clicked(){"  +
-           // "alert('hello')" +
-           "document.getElementsByName('a').bgcolor='blue'" +
+           "alert(document.getElementsByName('abc')[0].tagName)"   +
              "}"+
            "</script>" + 
       "<style type='text/css'>" +
@@ -23,8 +22,8 @@ app.get('/abc', function(req, res) {
             "color:green;" + 
         "}" + 
         "</style>" + 
-           "<table>" +
-           "<tr name='a' onclick='clicked()'>" +
+           "<table name ='abc'>" +
+           "<tr name='a' bgcolor='blue' onclick='clicked()'>" +
            "<td class='abc'>abc</td>" +
            "<td type='button'>123</td>" +
            "</tr>" +
