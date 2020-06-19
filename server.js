@@ -14,17 +14,20 @@ app.get('/', function(req, res) {
 app.get('/abc', function(req, res) {
   res.send("<script>" + 
            "function clicked(){"  +
-           "alert(document.getElementsByName('abc')[0].tagName)"   +
+          // "document.getElementsByName('a')[0].style.color ='red' "   +
+           //"document.getElementsByName('abc')[0].border ='1px' "   +
+           "document.getElementsByName('abc')[0].border ='1px' "   +
+           
              "}"+
            "</script>" + 
       "<style type='text/css'>" +
-        ".abc {" + 
+        ".abc1 {" + 
             "color:green;" + 
         "}" + 
         "</style>" + 
-           "<table name ='abc'>" +
-           "<tr name='a' bgcolor='blue' onclick='clicked()'>" +
-           "<td class='abc'>abc</td>" +
+           "<table border='10px' name ='abc'>" +
+           "<tr name='a' class ='m' bgcolor='red'  onclick='clicked()'>" +
+           "<td class='abc1'>abc</td>" +
            "<td type='button'>123</td>" +
            "</tr>" +
            "<tr>" +
