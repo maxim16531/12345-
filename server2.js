@@ -12,27 +12,18 @@ app.get('/', function(req, res) {
 });
 
 app.get('/abc', function(req, res) {
-  res.send('<script> function clicked() {' + 
-                  'var status = 0; ' + 
-                  'for(var ind = 0; ind < 5; ind++) {' +
-                  'setTimeout( function timer(){' +
-                  'status = 1 - status; ' +
-                  'alert(status); ' +
-                  '}, ind*2000 );' +
-                  '}' +
-                   " if (status = 0){" + 
-           'document.getElementsByName("a")[0].style.color="white";' +
-               "}" + 
-               "else{" + 
-           // 'document.getElementsByName("a")[0].style.color="red";' +        
-               "}" +  
-           "};"+
-         //  "document.getElementsByName('a')[0].style.color ='red' "   +
-           
+  res.send("<script>" + 
+           "function clicked(){" +
+           "var status = 0" + 
+           "status 1 - status" +
+           "alert('hello');" +
+           "document.getElementsByName('a')[0].style.color ='red' "   +
            //"document.getElementsByName('abc')[0].border ='1px' "   +
-          // "document.getElementsByName('a')[0].style.color ='red' "   +
-          "</script>" + 
-         "<style type='text/css'>" +
+           //"document.getElementsByName('abc')[0].border ='1px' "   +
+           
+             "}"+
+           "</script>" + 
+      "<style type='text/css'>" +
         ".abc1 {" + 
             "color:green;" + 
         "}" + 
@@ -48,8 +39,6 @@ app.get('/abc', function(req, res) {
            "</tr>" +
            "</table>");
 });
-
-
 // запускаем сервер на порту 8080
 app.listen(8080);
 // отправляем сообщение
